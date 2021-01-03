@@ -1,0 +1,7 @@
+[init]
+	defaultBranch = main
+[user]
+	name = Keith Wade
+	email = keawade@protonmail.com
+[pull]
+	rebase = false

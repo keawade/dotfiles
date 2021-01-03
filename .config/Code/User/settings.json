@@ -1,0 +1,255 @@
+{
+  // Editor Style
+  // Make my text all pretty 😊
+  "editor.fontFamily": "Fira Code",
+  "editor.fontLigatures": true,
+  "editor.fontSize": 13,
+  "workbench.fontAliasing": "antialiased",
+
+  // Default zoom level. This setting is changed when you hit Cmd + Shift + +/- and if you don't set it manually it gets inserted at the bottom of the file.
+  "window.zoomLevel": 0,
+
+  // Reduce width of the minimap to free up that space for other things
+  "editor.minimap.maxColumn": 100,
+
+  // Make whitespace characters more identifiable
+  "editor.renderWhitespace": "selection",
+
+  // Display common line wrap columns
+  "editor.rulers": [80, 100],
+
+  // Conserve space
+  "editor.tabSize": 2,
+
+  // Set pretty theme to make me happier
+  "workbench.colorTheme": "Dracula",
+
+  // Set pretty icons both to make me happy and to make different files/folders more distinct (Particularly useful in deployment repos)
+  "workbench.iconTheme": "material-icon-theme",
+
+  // Change terminal cursor to style I prefer
+  "terminal.integrated.cursorBlinking": true,
+  "terminal.integrated.cursorStyle": "underline",
+
+  // Increase terminal font size
+  "terminal.integrated.fontSize": 13,
+
+  "workbench.colorCustomizations": {
+    // Make currently selected line more prominent
+    "editor.lineHighlightBackground": "#eeeeee20"
+  },
+
+  // I hate wordwrap. I would rather scroll than deal with variable wrapping.
+  "editor.wordWrap": "off",
+
+  // Editor Behavior
+  // Use the original behavior instead of the new peek behavior when I hit F12
+  "editor.gotoLocation.multipleDefinitions": "goto",
+
+  // Override default shell of zsh to fish
+  "terminal.integrated.shell.osx": "/usr/local/bin/fish",
+
+  // Format on saaaaaave <3
+  "editor.formatOnSave": true,
+  "editor.codeActionsOnSave": {
+    "source.tslint.fixAll": true
+  },
+
+  // Turn off syntax highlight copying disaster
+  "editor.copyWithSyntaxHighlighting": false,
+
+  // Stop pushing the snippets I rarely use above the things I use all the time
+  "editor.snippetSuggestions": "bottom",
+
+  // Keep folder display explicit
+  "explorer.compactFolders": false,
+
+  // Stop editor from asking when moving files with drag/drop
+  "explorer.confirmDragAndDrop": false,
+
+  // Automate the boring things
+  "javascript.updateImportsOnFileMove.enabled": "always",
+  "typescript.updateImportsOnFileMove.enabled": "always",
+
+  // Use Prettier to format by default
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+
+  // Caused more issues than it's convenience was worth
+  "markdown.extension.toc.updateOnSave": false,
+
+  // Turn off Code Lens feature
+  "gitlens.codeLens.enabled": false,
+
+  // New editors open with a new file so I can have a scratch pad immediately
+  "workbench.startupEditor": "newUntitledFile",
+
+  // Check JS with TS by default (Overridden by local tsconfig or jsconfig file)
+  "js/ts.implicitProjectConfig.checkJs": true,
+
+  // Turn of telemetry and features that share too much
+  "gitlens.advanced.telemetry.enabled": false,
+  "telemetry.enableCrashReporter": false,
+  "telemetry.enableTelemetry": false,
+  "workbench.enableExperiments": false,
+  "workbench.editor.scrollToSwitchTabs": false,
+  "workbench.settings.enableNaturalLanguageSearch": false,
+  "liveshare.autoShareServers": false,
+  "liveshare.openSharedServers": false,
+
+  // File Type Overrides
+  "[csv]": {
+    // Don't insert final new line in CSV files that result in an empty row of data
+    "files.insertFinalNewline": false
+  },
+  "[markdown]": {
+    "editor.defaultFormatter": "yzhang.markdown-all-in-one"
+  },
+  "[xml]": {
+    "editor.formatOnSave": false
+  },
+
+  // Misc / Unknown auto generated settings from extensions
+  "timeline.excludeSources": [],
+  "git.autofetch": true,
+
+  // Turn off Spell Checker's widget on the status bar
+  "cSpell.showStatus": false,
+
+  // User Dictionary
+  "cSpell.userWords": [
+    "AKAs",
+    "Auditable",
+    "Barcode",
+    "Debuggable",
+    "Deployer",
+    "Docker's",
+    "HREFs",
+    "Healthcheck",
+    "Interop",
+    "KUBE",
+    "Kenobi",
+    "MSTEAMS",
+    "Monitorable",
+    "Performant",
+    "RISKLEVEL",
+    "Roadmap",
+    "SDNs",
+    "TODOs",
+    "Theming",
+    "Transpiles",
+    "WEBHOOK",
+    "alphadash",
+    "alphanum",
+    "apikey",
+    "appx",
+    "banksy",
+    "choiceset",
+    "chsh",
+    "classname",
+    "collapsable",
+    "combinatorics",
+    "commandsstop",
+    "containerd",
+    "customizations",
+    "cyclomatic",
+    "datasource",
+    "deserializes",
+    "devcontainer",
+    "dockeconfigjson",
+    "dockercfg",
+    "dockerconfig",
+    "dockerfilelint",
+    "doesnotexist",
+    "errorcode",
+    "esnext",
+    "eval",
+    "execa",
+    "fira",
+    "fixy",
+    "fullscreen",
+    "generatorics",
+    "gitignore",
+    "gitlens",
+    "globby",
+    "guid",
+    "hotfix",
+    "hotfixes",
+    "huskyrc",
+    "iframes",
+    "jsonb",
+    "junit",
+    "kebabcase",
+    "keychain",
+    "kubernetes",
+    "kwade",
+    "liveshare",
+    "lockfile",
+    "markdownlint",
+    "metalsmith",
+    "microservice",
+    "microservices",
+    "middlewares",
+    "mixins",
+    "mkdir",
+    "moleculer",
+    "moxios",
+    "mutex",
+    "nats",
+    "neighborinos",
+    "nelnet",
+    "noopener",
+    "noreferrer",
+    "npmjs",
+    "npmrc",
+    "nullish",
+    "oclif",
+    "openssl",
+    "ormconfig",
+    "pacote",
+    "params",
+    "postacceptance",
+    "postgres",
+    "prepatch",
+    "prequalification",
+    "prerelease",
+    "printf",
+    "promisify",
+    "proptypes",
+    "recurse",
+    "redeclaration",
+    "redeclarations",
+    "reinstantiating",
+    "repo",
+    "repos",
+    "retryable",
+    "rolledback",
+    "serializer",
+    "signale",
+    "signup",
+    "smartystreets",
+    "subheader",
+    "swipeable",
+    "tabindex",
+    "tablecolumn",
+    "templating",
+    "tocstop",
+    "transpiled",
+    "truthy",
+    "trycatch",
+    "tslib",
+    "tsutils",
+    "typeorm",
+    "ubuntuinstall",
+    "unformat",
+    "unmount",
+    "unparse",
+    "unparsed",
+    "unsecure",
+    "unzipper",
+    "userconfig",
+    "validators",
+    "yosay",
+    "zipcode",
+    "zxcvbn"
+  ]
+}

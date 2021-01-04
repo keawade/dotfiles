@@ -1,7 +1,13 @@
+[alias]
+	lg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
+    listdead = "!sh -c \"git branch -vv | grep ': gone]' | awk '{print \\$1}'\""
+    prunedead = "!sh -c \"git branch -vv | grep ': gone]' | awk '{print \\$1}' | xargs git branch -D\""
 [init]
 	defaultBranch = main
 [user]
 	name = Keith Wade
 	email = keawade@protonmail.com
+[core]
+	editor = vim
 [pull]
 	rebase = false

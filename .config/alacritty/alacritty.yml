@@ -10,8 +10,6 @@ font:
     family: Fira Code Retina
   size: 13.0
 
-working_directory: /Users/kwade/Projects/Nelnet/
-
 # Colors (Dracula)
 colors:
   # Default colors

@@ -1,7 +1,7 @@
 alias config='/usr/bin/git --git-dir=$HOME/.keawade-config/ --work-tree=$HOME'
 
-set PATH /usr/local/opt/coreutils/libexec/gnubin $PATH
-set MANPATH /usr/local/opt/coreutils/libexec/gnuman $MANPATH
+set -gxp fish_user_paths /usr/local/opt/coreutils/libexec/gnubin $PATH
+set -gxp MANPATH /usr/local/opt/coreutils/libexec/gnuman $MANPATH
 
 starship init fish | source
 

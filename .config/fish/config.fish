@@ -25,3 +25,8 @@ alias diedockerdie='heckindocker || true && docker system prune --all --force'
 
 # Prompt for merged branches to prune, and then delete them from local
 alias gitprune='git branch --merged | grep -v "master\|develop\|*" > /tmp/branches-to-prune && vim /tmp/branches-to-prune && xargs git branch -d < /tmp/branches-to-prune'
+
+function on_exit --on-event fish_exit
+    echo 'so long and thanks for all the fish 🐬'
+    sleep 0.5
+end

@@ -1,13 +1,22 @@
 [alias]
 	lg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
-    listdead = "!sh -c \"git branch -vv | grep ': gone]' | awk '{print \\$1}'\""
-    prunedead = "!sh -c \"git branch -vv | grep ': gone]' | awk '{print \\$1}' | xargs git branch -D\""
+	listdead = "!sh -c \"git branch -vv | grep ': gone]' | awk '{print \\$1}'\""
+	prunedead = "!sh -c \"git branch -vv | grep ': gone]' | awk '{print \\$1}' | xargs git branch -D\""
+	uncommit = reset --mixed HEAD~
+	unstage = reset  -q HEAD --
+	discard = checkout  --
+	unstash = stash pop
+	tree = log --all --graph --decorate --oneline
+
 [init]
 	defaultBranch = main
+
 [user]
 	name = Keith Wade
 	email = keawade@protonmail.com
+
 [core]
 	editor = vim
+
 [pull]
 	rebase = false

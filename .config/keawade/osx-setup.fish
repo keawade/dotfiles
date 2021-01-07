@@ -8,8 +8,8 @@ sudo -v
 defaults write -g ApplePressAndHoldEnabled -bool false
 
 # Raise keyboard key repeat rate
-defaults write -g InitialKeyRepeat -int 32 # normal minimum is 15 (225 ms)
-defaults write -g KeyRepeat -int 10 # normal minimum is 2 (30 ms)
+defaults write -g InitialKeyRepeat -int 15 # normal minimum is 15 (225 ms)
+defaults write -g KeyRepeat -int 4 # normal minimum is 2 (30 ms)
 
 # Always show scrollbars
 defaults write NSGlobalDomain AppleShowScrollBars -string "Always"

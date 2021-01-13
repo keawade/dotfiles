@@ -41,7 +41,7 @@ defaults write NSGlobalDomain AppleKeyboardUIMode -int 3
 # (e.g. enable Tab in modal dialogs)
 defaults write NSGlobalDomain AppleKeyboardUIMode -int 3
 
-defaults write com.apple.screencapture location -string "$HOME/Desktop/Screenshots"
+defaults write com.apple.screencapture location -string "$HOME/Pictures/Screenshots"
 
 # Save screenshots in PNG format
 defaults write com.apple.screencapture type -string "png"

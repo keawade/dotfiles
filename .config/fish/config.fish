@@ -1,10 +1,6 @@
 # Set up dotfiles git command
 alias config='/usr/bin/git --git-dir=$HOME/.keawade-config/ --work-tree=$HOME'
 
-# Make the GNU utils override the default core utils provided by Mac OS
-set -gxp fish_user_paths /usr/local/opt/coreutils/libexec/gnubin $PATH
-set -gxp MANPATH /usr/local/opt/coreutils/libexec/gnuman $MANPATH
-
 # Initialize starship prompt
 starship init fish | source
 
@@ -31,4 +27,6 @@ function on_exit --on-event fish_exit
     echo 'so long and thanks for all the fish 🐬'
     sleep 0.5
 end
+
+alias clear="clear && echo 'so clean ✨'"
 

@@ -21,8 +21,9 @@
   // Conserve space
   "editor.tabSize": 2,
 
-  // Set pretty theme to make me happier
-  "workbench.colorTheme": "Dracula",
+  // Disable menu bar and focus shortcut so `alt` is usable again
+  "window.menuBarVisibility": "hidden",
+  "window.customMenuBarAltFocus": false,
 
   // Set pretty icons both to make me happy and to make different files/folders more distinct (Particularly useful in deployment repos)
   "workbench.iconTheme": "material-icon-theme",

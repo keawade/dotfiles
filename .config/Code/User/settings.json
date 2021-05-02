@@ -108,6 +108,9 @@
   "[xml]": {
     "editor.formatOnSave": false
   },
+  "[rust]": {
+    "editor.defaultFormatter": "rust-lang.rust"
+  },
 
   // Misc / Unknown auto generated settings from extensions
   "timeline.excludeSources": [],

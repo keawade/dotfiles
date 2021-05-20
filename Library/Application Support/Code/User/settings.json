@@ -6,14 +6,11 @@
   "editor.fontSize": 13,
   "workbench.fontAliasing": "antialiased",
 
-  // Default zoom level. This setting is changed when you hit Cmd + Shift + +/- and if you don't set it manually it gets inserted at the bottom of the file.
-  "window.zoomLevel": 0,
-
   // Reduce width of the minimap to free up that space for other things
   "editor.minimap.maxColumn": 100,
 
   // Make whitespace characters more identifiable
-  "editor.renderWhitespace": "selection",
+  "editor.renderWhitespace": "all",
 
   // Display common line wrap columns
   "editor.rulers": [80, 100],
@@ -44,7 +41,12 @@
 
   // Editor Behavior
   // Use the original behavior instead of the new peek behavior when I hit F12
+  "editor.gotoLocation.multipleReferences": "goto",
   "editor.gotoLocation.multipleDefinitions": "goto",
+  "editor.gotoLocation.multipleDeclarations": "goto",
+  "editor.gotoLocation.multipleImplementations": "goto",
+  "editor.gotoLocation.multipleTypeDefinitions": "goto",
+  "diffEditor.renderSideBySide": false,
 
   // Override default shell of zsh to fish
   "terminal.integrated.shell.osx": "/usr/local/bin/fish",
@@ -52,7 +54,8 @@
   // Format on saaaaaave <3
   "editor.formatOnSave": true,
   "editor.codeActionsOnSave": {
-    "source.tslint.fixAll": true
+    "source.tslint.fixAll": true,
+    "source.fixAll.markdownlint": true
   },
 
   // Turn off syntax highlight copying disaster
@@ -60,6 +63,7 @@
 
   // Stop pushing the snippets I rarely use above the things I use all the time
   "editor.snippetSuggestions": "bottom",
+  "emmet.showExpandedAbbreviation": "never",
 
   // Keep folder display explicit
   "explorer.compactFolders": false,
@@ -104,6 +108,9 @@
   "[markdown]": {
     "editor.defaultFormatter": "yzhang.markdown-all-in-one"
   },
+  "[rego]": {
+    "editor.defaultFormatter": "tsandall.opa"
+  },
   "[xml]": {
     "editor.formatOnSave": false
   },
@@ -117,26 +124,30 @@
 
   // User Dictionary
   "cSpell.userWords": [
-    "AKAs",
     "Auditable",
     "Barcode",
     "Debuggable",
     "Deployer",
     "Docker's",
+    "Errored",
     "HREFs",
     "Healthcheck",
     "Interop",
+    "JFROG",
     "KUBE",
     "Kenobi",
     "MSTEAMS",
     "Monitorable",
     "Performant",
     "RISKLEVEL",
+    "Reimagined",
     "Roadmap",
     "SDNs",
+    "Serializable",
     "TODOs",
-    "Theming",
+    "TRANSUNION",
     "Transpiles",
+    "VCLI",
     "WEBHOOK",
     "alphadash",
     "alphanum",
@@ -149,10 +160,11 @@
     "collapsable",
     "combinatorics",
     "commandsstop",
+    "composability",
     "containerd",
     "customizations",
     "cyclomatic",
-    "datasource",
+    "deployers",
     "deserializes",
     "devcontainer",
     "dockeconfigjson",
@@ -165,7 +177,6 @@
     "eval",
     "execa",
     "fira",
-    "fixy",
     "fullscreen",
     "generatorics",
     "gitignore",
@@ -178,8 +189,9 @@
     "iframes",
     "jsonb",
     "junit",
-    "kebabcase",
     "keychain",
+    "kubeconfig",
+    "kubectl",
     "kubernetes",
     "kwade",
     "liveshare",
@@ -229,17 +241,13 @@
     "smartystreets",
     "subheader",
     "swipeable",
-    "tabindex",
-    "tablecolumn",
     "templating",
-    "tocstop",
+    "toupper",
     "transpiled",
     "truthy",
-    "trycatch",
     "tslib",
     "tsutils",
     "typeorm",
-    "ubuntuinstall",
     "unformat",
     "unmount",
     "unparse",
@@ -251,5 +259,12 @@
     "yosay",
     "zipcode",
     "zxcvbn"
+  ],
+  "hediet.vscode-drawio.theme": "Kennedy",
+  "workbench.editorAssociations": [
+    {
+      "viewType": "hediet.vscode-drawio",
+      "filenamePattern": "*.drawio.png"
+    }
   ]
 }

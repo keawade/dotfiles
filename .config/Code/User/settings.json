@@ -58,7 +58,7 @@
   // Format on saaaaaave <3
   "editor.formatOnSave": true,
   "editor.codeActionsOnSave": {
-    "source.fixAll": true,
+    "source.fixAll": true
   },
 
   // Turn off syntax highlight copying disaster
@@ -102,6 +102,7 @@
   "gitlens.advanced.telemetry.enabled": false,
   "liveshare.autoShareServers": false,
   "liveshare.openSharedServers": false,
+  "redhat.telemetry.enabled": false,
 
   // File Type Overrides
   "[csv]": {

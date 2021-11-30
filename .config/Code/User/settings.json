@@ -94,6 +94,7 @@
   "js/ts.implicitProjectConfig.checkJs": true,
 
   // Turn of telemetry and features that share too much
+  "telemetry.telemetryLevel": "off",
   "telemetry.enableTelemetry": false,
   "telemetry.enableCrashReporter": false,
   "workbench.enableExperiments": false,

@@ -6,7 +6,7 @@ if status is-interactive
   starship init fish | source
 
   # Select node version to use with nvm for session
-  nvm use 14
+  nvm use 16
 
   # Be more polite
   alias f='fuck'

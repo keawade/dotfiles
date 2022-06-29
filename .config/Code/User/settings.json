@@ -6,7 +6,7 @@
   "editor.fontSize": 13,
 
   // Default zoom level. This setting is changed when you hit Cmd + Shift + +/- and if you don't set it manually it gets inserted at the bottom of the file.
-  "window.zoomLevel": 0,
+  "window.zoomLevel": 1,
 
   // Reduce width of the minimap to free up that space for other things
   "editor.minimap.maxColumn": 100,
@@ -41,6 +41,12 @@
 
   // I hate wordwrap. I would rather scroll than deal with variable wrapping.
   "editor.wordWrap": "off",
+
+  "remote.SSH.useLocalServer": false,
+  "remote.SSH.remotePlatform": {
+    "luna": "linux",
+    "sol": "linux"
+  },
 
   // Editor Behavior
   // Use the original behavior instead of the new peek behavior when I hit F12
@@ -268,5 +274,5 @@
     "yosay",
     "zipcode",
     "zxcvbn"
-  ]
+  ],
 }

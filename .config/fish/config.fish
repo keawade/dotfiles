@@ -5,8 +5,11 @@ if status is-interactive
   # Initialize starship prompt
   starship init fish | source
 
+  # Initialize k8s completions
+  kubectl completion fish | source
+
   # Select node version to use with nvm for session
-  nvm use 16
+  nvm use 16 > /dev/null
 
   # Be more polite
   alias f='fuck'
@@ -18,11 +21,9 @@ if status is-interactive
 
   set -gx THEFUCK_OVERRIDEN_ALIASES 'ls,find'
 
-  # Kill all docker containers
-  alias heckindocker='docker rm -f (docker ps -aq)'
-
-  # Kill all running containers and delete all images
-  alias diedockerdie='heckindocker || true && docker system prune --all --force'
+  alias kc="kubectl"
+  alias watchpods="watch -n 1 kubectl get pods"
+  alias decapitate="helm ls --all --short | xargs -L1 helm delete"
 
   function on_exit --on-event fish_exit
     echo 'so long and thanks for all the fish 🐬'

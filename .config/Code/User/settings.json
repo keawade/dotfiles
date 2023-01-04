@@ -6,7 +6,7 @@
   "editor.fontSize": 13,
 
   // Default zoom level. This setting is changed when you hit Cmd + Shift + +/- and if you don't set it manually it gets inserted at the bottom of the file.
-  "window.zoomLevel": 1,
+  "window.zoomLevel": 0,
 
   // Reduce width of the minimap to free up that space for other things
   "editor.minimap.maxColumn": 100,
@@ -20,6 +20,9 @@
   // Conserve space
   "editor.tabSize": 2,
 
+  "editor.bracketPairColorization.enabled": true,
+  "editor.guides.bracketPairs": "active",
+
   // Disable menu bar and focus shortcut so `alt` is usable again
   "window.menuBarVisibility": "hidden",
   "window.customMenuBarAltFocus": false,
@@ -30,6 +33,7 @@
   // Change terminal cursor to style I prefer
   "terminal.integrated.cursorBlinking": true,
   "terminal.integrated.cursorStyle": "underline",
+  "terminal.external.osxExec": "Alacritty.app",
 
   // Increase terminal font size
   "terminal.integrated.fontSize": 13,
@@ -117,7 +121,7 @@
     "files.insertFinalNewline": false
   },
   "[markdown]": {
-    "editor.defaultFormatter": "yzhang.markdown-all-in-one"
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
   "[rego]": {
     "editor.defaultFormatter": "tsandall.opa"
@@ -125,14 +129,12 @@
   "[xml]": {
     "editor.formatOnSave": false
   },
-
-  // Misc / Unknown auto generated settings from extensions
-  "timeline.excludeSources": [],
   "git.autofetch": true,
 
   "hediet.vscode-drawio.theme": "Kennedy",
   "workbench.editorAssociations": {
-    "*.drawio.png": "hediet.vscode-drawio"
+    "*.drawio.png": "hediet.vscode-drawio",
+    "*.drawio.svg": "hediet.vscode-drawio"
   },
 
   // Turn off Spell Checker's widget on the status bar
@@ -141,31 +143,14 @@
   "cSpell.userWords": [
     "AKAs",
     "Alacritty",
-    "Auditable",
-    "Barcode",
-    "Debuggable",
-    "Deployer",
-    "Docker's",
-    "HREFs",
-    "Healthcheck",
-    "Interop",
-    "KUBE",
-    "Kenobi",
-    "MSTEAMS",
-    "Monitorable",
-    "Performant",
-    "RISKLEVEL",
-    "Roadmap",
-    "SDNs",
-    "TODOs",
-    "Theming",
-    "Transpiles",
-    "WEBHOOK",
     "alphadash",
     "alphanum",
     "apikey",
     "appx",
+    "Auditable",
     "banksy",
+    "Barcode",
+    "bitnami",
     "choiceset",
     "chsh",
     "classname",
@@ -176,9 +161,12 @@
     "customizations",
     "cyclomatic",
     "datasource",
+    "Debuggable",
+    "Deployer",
     "deserializes",
     "devcontainer",
     "dockeconfigjson",
+    "Docker's",
     "dockercfg",
     "dockerconfig",
     "dockerfilelint",
@@ -195,14 +183,20 @@
     "gitlens",
     "globby",
     "guid",
+    "Healthcheck",
+    "helmfile",
     "hotfix",
     "hotfixes",
+    "HREFs",
     "huskyrc",
     "iframes",
+    "Interop",
     "jsonb",
     "junit",
     "kebabcase",
+    "Kenobi",
     "keychain",
+    "KUBE",
     "kubernetes",
     "kwade",
     "liveshare",
@@ -215,7 +209,9 @@
     "mixins",
     "mkdir",
     "moleculer",
+    "Monitorable",
     "moxios",
+    "MSTEAMS",
     "mutex",
     "nats",
     "neighborinos",
@@ -230,6 +226,7 @@
     "ormconfig",
     "pacote",
     "params",
+    "Performant",
     "postacceptance",
     "postgres",
     "prepatch",
@@ -245,7 +242,10 @@
     "repo",
     "repos",
     "retryable",
+    "RISKLEVEL",
+    "Roadmap",
     "rolledback",
+    "SDNs",
     "serializer",
     "signale",
     "signup",
@@ -255,8 +255,11 @@
     "tabindex",
     "tablecolumn",
     "templating",
+    "Theming",
     "tocstop",
+    "TODOs",
     "transpiled",
+    "Transpiles",
     "truthy",
     "trycatch",
     "tslib",
@@ -271,8 +274,9 @@
     "unzipper",
     "userconfig",
     "validators",
+    "WEBHOOK",
     "yosay",
     "zipcode",
     "zxcvbn"
-  ],
+  ]
 }

@@ -9,7 +9,7 @@ if status is-interactive
   kubectl completion fish | source
 
   # Select node version to use with nvm for session
-  nvm use 16 > /dev/null
+  nvm use 18 > /dev/null
 
   # Be more polite
   alias f='fuck'

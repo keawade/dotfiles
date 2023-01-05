@@ -25,6 +25,10 @@ if status is-interactive
   alias watchpods="watch -n 1 kubectl get pods"
   alias decapitate="helm ls --all --short | xargs -L1 helm delete"
 
+  alias kc="kubectl"
+
+  alias zola="flatpak run org.getzola.zola"
+
   function on_exit --on-event fish_exit
     echo 'so long and thanks for all the fish 🐬'
     sleep 0.5

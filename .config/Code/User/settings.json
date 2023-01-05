@@ -129,6 +129,9 @@
   "[xml]": {
     "editor.formatOnSave": false
   },
+  "[rust]": {
+    "editor.defaultFormatter": "rust-lang.rust-analyzer"
+  },
   "git.autofetch": true,
 
   "hediet.vscode-drawio.theme": "Kennedy",

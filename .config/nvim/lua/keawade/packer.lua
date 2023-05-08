@@ -14,13 +14,7 @@ return require('packer').startup(function(use)
   }
 
   -- Theme
-  use({
-    'rose-pine/neovim',
-    as = 'rose-pine',
-    config = function()
-      vim.cmd('colorscheme rose-pine')
-    end
-  })
+  use 'savq/melange-nvim'
 
   use('nvim-treesitter/nvim-treesitter', { run = ':TSUpdate' })
   use('nvim-treesitter/playground')
@@ -61,5 +55,8 @@ return require('packer').startup(function(use)
   }
 
   use 'ThePrimeagen/vim-be-good'
+
+  -- Personal vim cheatsheat
+  use 'tinyheero/vim-myhelp'
 end)
 

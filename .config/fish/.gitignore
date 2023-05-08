@@ -1,0 +1,8 @@
+completions/
+conf.d/
+functions/
+!functions/update.fish
+themes/
+fish_plugins
+fish_variables
+

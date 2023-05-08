@@ -3,7 +3,5 @@ function fish_greeting
   # Piping to /dev/null because I've aliased `clear` to print some fun text and this gets rid of it in this instance
   clear > /dev/null
   echo Welcome to fish, the friendly interactive shell 🐟
-  echo
-  fortune -s
 end
 

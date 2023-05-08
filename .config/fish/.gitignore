@@ -1,7 +1,9 @@
 completions/
 conf.d/
 functions/
-!functions/update.fish
+!functions/fish_greeting.fish
+!functions/fuck.fish
+!functions.update.fish
 themes/
 fish_plugins
 fish_variables

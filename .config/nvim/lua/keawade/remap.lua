@@ -51,7 +51,7 @@ vim.keymap.set("n", "<leader>s", [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><
 -- Save with +x on file
 vim.keymap.set("n", "<leader>x", "<cmd>!chmod +x %<CR>", { silent = true })
 
--- Quickly source vim config
+-- Quickly reload vim config
 vim.keymap.set("n", "<leader><leader>", function()
     vim.cmd("so")
 end)

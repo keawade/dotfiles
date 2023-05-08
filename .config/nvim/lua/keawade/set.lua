@@ -1,6 +1,12 @@
+-- Disable netrw at the very start of your init.lua
+vim.g.loaded_netrw = 1
+vim.g.loaded_netrwPlugin = 1
+
+-- Line numbers
 vim.opt.nu = true
 vim.opt.relativenumber = true
 
+-- Sane tabs
 vim.opt.tabstop = 2
 vim.opt.softtabstop = 2
 vim.opt.shiftwidth = 2

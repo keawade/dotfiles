@@ -59,5 +59,7 @@ return require('packer').startup(function(use)
       require("nvim-tree").setup {}
     end
   }
+
+  use 'ThePrimeagen/vim-be-good'
 end)
 

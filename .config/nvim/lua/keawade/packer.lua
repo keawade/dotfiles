@@ -54,6 +54,8 @@ return require('packer').startup(function(use)
     end
   }
 
+  use 'christoomey/vim-tmux-navigator'
+
   use 'ThePrimeagen/vim-be-good'
 
   -- Personal vim cheatsheat

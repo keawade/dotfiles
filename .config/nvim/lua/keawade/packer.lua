@@ -7,6 +7,7 @@ return require('packer').startup(function(use)
   -- Packer can manage itself
   use 'wbthomason/packer.nvim'
 
+  -- Really nice fuzzy finder
   use {
     'nvim-telescope/telescope.nvim', tag = '0.1.1',
     -- or                            , branch = '0.1.x',
@@ -16,13 +17,21 @@ return require('packer').startup(function(use)
   -- Theme
   use 'savq/melange-nvim'
 
+  -- Incremental parsing system for editor tools
   use('nvim-treesitter/nvim-treesitter', { run = ':TSUpdate' })
   use('nvim-treesitter/playground')
 
+  -- Creates a list of quick swap targets
   use('theprimeagen/harpoon')
+
+  -- Undo history visualizer
   use('mbbill/undotree')
+
+  -- Git plugin. Provides access to arbitrary git commands out of the vim
+  -- command tray and for remapping
   use('tpope/vim-fugitive')
 
+  -- Language server configuration
   use {
     'VonHeikemen/lsp-zero.nvim',
     branch = 'v2.x',
@@ -44,6 +53,7 @@ return require('packer').startup(function(use)
     }
   }
 
+  -- Better file explorer than Ex
   use {
     'nvim-tree/nvim-tree.lua',
     requires = {
@@ -54,8 +64,10 @@ return require('packer').startup(function(use)
     end
   }
 
+  -- Integrates nvim and tmux controls
   use 'christoomey/vim-tmux-navigator'
 
+  -- vim motions tutorial games
   use 'ThePrimeagen/vim-be-good'
 
   -- Personal vim cheatsheat

@@ -70,6 +70,20 @@ return require('packer').startup(function(use)
   -- vim motions tutorial games
   use 'ThePrimeagen/vim-be-good'
 
+  -- Shows an overlay with options after keypresses to help remind me what
+  -- mappings are available
+  use {
+    'folke/which-key.nvim',
+    config = function ()
+      vim.o.timeout = true
+      vim.o.timeoutlen = 300
+      require('which-key').setup {
+        -- your configuration comes here
+        -- or leave it empty to use the default settings
+      }
+    end
+  }
+
   -- Personal vim cheatsheat
   use 'tinyheero/vim-myhelp'
 end)

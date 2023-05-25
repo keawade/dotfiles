@@ -35,7 +35,7 @@ vim.keymap.set("v", "<leader>d", "\"_d")
 vim.keymap.set("n", "Q", "<nop>")
 
 -- Switch tmux sessions quickly
-vim.keymap.set("n", "<C-f>", "<cmd>silent !tmux neww tmux-sessionizer<CR>")
+--vim.keymap.set("n", "<C-f>", "<cmd>silent !tmux neww tmux-sessionizer<CR>")
 
 -- Apply formatting
 vim.keymap.set("n", "<leader>f", function() vim.lsp.buf.format() end)
@@ -50,7 +50,7 @@ vim.keymap.set("n", "<leader>f", function() vim.lsp.buf.format() end)
 -- Open search menu ready to replace the word I was on
 vim.keymap.set("n", "<leader>s", [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>]])
 -- Save with +x on file
-vim.keymap.set("n", "<leader>x", "<cmd>!chmod +x %<CR>", { silent = true })
+--vim.keymap.set("n", "<leader>x", "<cmd>!chmod +x %<CR>", { silent = true })
 
 -- Quickly reload vim config
 vim.keymap.set("n", "<leader><leader>", function()

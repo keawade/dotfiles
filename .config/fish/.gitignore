@@ -3,7 +3,8 @@ conf.d/
 functions/
 !functions/fish_greeting.fish
 !functions/fuck.fish
-!functions.update.fish
+!functions/update.fish
+!functions/wat.fish
 themes/
 fish_variables
 

@@ -28,9 +28,21 @@ lsp.on_attach(function(client, bufnr)
     remap = false,
     desc = "[lsp] list symbols in workspace matching query"
   })
-	--vim.keymap.set("n", "<leader>vd", function() vim.lsp.buf.open_float() end, opts)
-	--vim.keymap.set("n", "[d", function() vim.lsp.buf.goto_next() end, opts)
-	--vim.keymap.set("n", "]d", function() vim.lsp.buf.goto_prev()end, opts)
+	vim.keymap.set("n", "<leader>vd", function() vim.diagnostic.open_float() end, {
+    buffer = bufnr,
+    remap = false,
+    desc = "[lsp] open diagnostic"
+  })
+	vim.keymap.set("n", "[d", function() vim.diagnostic.goto_next() end, {
+    buffer = bufnr,
+    remap = false,
+    desc = "[lsp] go to next diagnostic"
+  })
+	vim.keymap.set("n", "[d", function() vim.diagnostic.goto_prev() end, {
+    buffer = bufnr,
+    remap = false,
+    desc = "[lsp] go to previous diagnostic"
+  })
 	vim.keymap.set("n", "<leader>vca", function() vim.lsp.buf.code_action() end, {
     buffer = bufnr,
     remap = false,

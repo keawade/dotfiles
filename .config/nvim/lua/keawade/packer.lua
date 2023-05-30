@@ -69,7 +69,6 @@ return require('packer').startup(function(use)
   use 'lewis6991/gitsigns.nvim' -- OPTIONAL: for git status
   use 'romgrk/barbar.nvim'
 
-
   -- Integrates nvim and tmux controls
   use 'christoomey/vim-tmux-navigator'
 
@@ -89,6 +88,11 @@ return require('packer').startup(function(use)
       }
     end
   }
+
+  -- Prettier
+  use('neovim/nvim-lspconfig')
+  use('jose-elias-alvarez/null-ls.nvim')
+  use('MunifTanjim/prettier.nvim')
 
   -- Personal vim cheatsheat
   use 'tinyheero/vim-myhelp'

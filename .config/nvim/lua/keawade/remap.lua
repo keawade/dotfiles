@@ -38,7 +38,7 @@ vim.keymap.set("n", "Q", "<nop>")
 --vim.keymap.set("n", "<C-f>", "<cmd>silent !tmux neww tmux-sessionizer<CR>")
 
 -- Apply formatting
-vim.keymap.set("n", "<leader>f", function() vim.lsp.buf.format() end)
+--vim.keymap.set("n", "<leader>f", function() vim.lsp.buf.format() end)
 
 -- Quick fix list stuff (?)
 -- Didn't catch what this was for and it conflicts with pane navigation I want

@@ -1,5 +1,7 @@
 vim.g.mapleader = " "
-vim.keymap.set("n", "<leader>pv", vim.cmd.NvimTreeFocus)
+vim.keymap.set("n", "<leader>pv", vim.cmd.NvimTreeFocus, {
+  desc = "focus file tree."
+})
 
 -- Allow selecting multiple lines and moving them up and down and automatically
 -- handling indentation changes for blocks
@@ -19,17 +21,29 @@ vim.keymap.set("n", "N", "Nzzzv")
 
 -- When pasting over top of selection, delete selection into the void buffer
 -- so you don't loose your current paste buffer
-vim.keymap.set("x", "<leader>p", "\"_dP")
+vim.keymap.set("x", "<leader>p", "\"_dP", {
+  desc = "paste over selection without replacing current paste buffer with selection."
+})
 
 -- Enable yanking into system clipboard separately from internal vim
 -- Credit: asbjornHaland
-vim.keymap.set("n", "<leader>y", "\"+y")
-vim.keymap.set("v", "<leader>y", "\"+y")
-vim.keymap.set("n", "<leader>Y", "\"+Y")
+vim.keymap.set("n", "<leader>y", "\"+y", {
+  desc = "yank to system clipboard"
+})
+vim.keymap.set("v", "<leader>y", "\"+y", {
+  desc = "yank to system clipboard"
+})
+vim.keymap.set("n", "<leader>Y", "\"+Y", {
+  desc = "yank to system clipboard"
+})
 
 -- Delete to void register
-vim.keymap.set("n", "<leader>d", "\"_d")
-vim.keymap.set("v", "<leader>d", "\"_d")
+vim.keymap.set("n", "<leader>d", "\"_d", {
+  desc = "delete to void register"
+})
+vim.keymap.set("v", "<leader>d", "\"_d", {
+  desc = "delete to void register"
+})
 
 -- Q is the worst place in the universe
 vim.keymap.set("n", "Q", "<nop>")
@@ -38,7 +52,7 @@ vim.keymap.set("n", "Q", "<nop>")
 --vim.keymap.set("n", "<C-f>", "<cmd>silent !tmux neww tmux-sessionizer<CR>")
 
 -- Apply formatting
---vim.keymap.set("n", "<leader>f", function() vim.lsp.buf.format() end)
+--vim.keymap.set("n", "<leader>f", function() vim.lsp.buf.format() end, { desc = "apply formatting" })
 
 -- Quick fix list stuff (?)
 -- Didn't catch what this was for and it conflicts with pane navigation I want
@@ -48,12 +62,13 @@ vim.keymap.set("n", "Q", "<nop>")
 --vim.keymap.set("n", "<leader>j", "<cmd>lprev<CR>zz")
 
 -- Open search menu ready to replace the word I was on
-vim.keymap.set("n", "<leader>s", [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>]])
+vim.keymap.set("n", "<leader>s", [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>]], {
+  desc = "find and replace word"
+})
 -- Save with +x on file
---vim.keymap.set("n", "<leader>x", "<cmd>!chmod +x %<CR>", { silent = true })
+--vim.keymap.set("n", "<leader>x", "<cmd>!chmod +x %<CR>", { silent = true, desc = "save with +x on file" })
 
 -- Quickly reload vim config
 vim.keymap.set("n", "<leader><leader>", function()
     vim.cmd("so")
-end)
-
+end, { desc = "reload vim config" })

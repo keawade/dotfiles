@@ -31,7 +31,7 @@ vim.opt.signcolumn = "yes"
 vim.opt.isfname:append("@-@")
 
 vim.opt.list = true
-vim.opt.listchars = "tab:- ⇥,trail:·,nbsp:+"
+vim.opt.listchars = "tab:--⇥,trail:·,nbsp:+"
 
 vim.opt.updatetime = 50
 

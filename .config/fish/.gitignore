@@ -1,6 +1,7 @@
 completions/
 conf.d/
 functions/
+!functions/code.fish
 !functions/fish_greeting.fish
 !functions/fuck.fish
 !functions/update.fish

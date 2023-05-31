@@ -1,10 +1,5 @@
-function ColorMyPencils(color)
-	color = color or "melange"
-	vim.cmd.colorscheme(color)
+require('everforest').setup({
+  transparent_background_level = 1
+})
 
-	vim.api.nvim_set_hl(0, "Normal", { bg = "none" })
-	vim.api.nvim_set_hl(0, "NormalFloat", { bg = "none" })
-end
-
-ColorMyPencils()
-
+require('everforest').load()

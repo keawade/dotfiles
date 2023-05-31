@@ -15,7 +15,7 @@ return require('packer').startup(function(use)
   }
 
   -- Theme
-  use 'savq/melange-nvim'
+  use 'neanias/everforest-nvim'
 
   -- Incremental parsing system for editor tools
   use('nvim-treesitter/nvim-treesitter', { run = ':TSUpdate' })

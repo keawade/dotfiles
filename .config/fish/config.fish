@@ -36,5 +36,7 @@ if status is-interactive
   end
 
   alias clear="clear && echo 'so clean ✨'"
+
+  alias :q="exit"
 end
 

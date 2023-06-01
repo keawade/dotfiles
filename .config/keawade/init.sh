@@ -6,6 +6,8 @@
 if test -f "/etc/fedora-release";
 then
   sudo dnf install fish
+
+  fish ~/.config/keawade/fedora.fish
 fi
 
 if test (uname) eq "Darwin";
@@ -19,6 +21,3 @@ then
   echo Command fish not found!
   exit 1
 fi
-
-fish ~/.config/keawade/init.fish
-

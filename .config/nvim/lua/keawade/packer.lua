@@ -89,10 +89,7 @@ return require('packer').startup(function(use)
     end
   }
 
-  -- Prettier
-  use('neovim/nvim-lspconfig')
-  use('jose-elias-alvarez/null-ls.nvim')
-  use('MunifTanjim/prettier.nvim')
+  use 'sbdchd/neoformat'
 
   -- Personal vim cheatsheat
   use 'tinyheero/vim-myhelp'

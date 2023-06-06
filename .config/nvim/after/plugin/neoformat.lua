@@ -8,4 +8,4 @@ vim.g.neoformat_enabled_json = { 'prettierd', 'prettier', 'jsbeautify', 'prettyd
 vim.keymap.set("n", "<leader>f", function() vim.cmd("Neoformat") end, { desc = "[neofmt] format file" })
 
 -- TODO: Maybe remove? Gotta feel this out a bit.
-vim.cmd [[autocmd BufWritePre * Neoformat]]
+vim.cmd [[autocmd BufWritePre * undojoin | Neoformat]]

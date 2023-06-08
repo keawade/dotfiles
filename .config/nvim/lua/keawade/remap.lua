@@ -1,7 +1,12 @@
 vim.g.mapleader = " "
-vim.keymap.set("n", "<leader>pv", vim.cmd.NvimTreeFocus, {
-  desc = "focus file tree."
-})
+vim.keymap.set(
+    "n",
+    "<leader>pv",
+    vim.cmd.NvimTreeFocus,
+    {
+        desc = "focus file tree."
+    }
+)
 
 -- Allow selecting multiple lines and moving them up and down and automatically
 -- handling indentation changes for blocks
@@ -21,29 +26,59 @@ vim.keymap.set("n", "N", "Nzzzv")
 
 -- When pasting over top of selection, delete selection into the void buffer
 -- so you don't loose your current paste buffer
-vim.keymap.set("x", "<leader>p", "\"_dP", {
-  desc = "paste over selection without replacing current paste buffer with selection."
-})
+vim.keymap.set(
+    "x",
+    "<leader>p",
+    '"_dP',
+    {
+        desc = "paste over selection without replacing current paste buffer with selection."
+    }
+)
 
 -- Enable yanking into system clipboard separately from internal vim
 -- Credit: asbjornHaland
-vim.keymap.set("n", "<leader>y", "\"+y", {
-  desc = "yank to system clipboard"
-})
-vim.keymap.set("v", "<leader>y", "\"+y", {
-  desc = "yank to system clipboard"
-})
-vim.keymap.set("n", "<leader>Y", "\"+Y", {
-  desc = "yank to system clipboard"
-})
+vim.keymap.set(
+    "n",
+    "<leader>y",
+    '"+y',
+    {
+        desc = "yank to system clipboard"
+    }
+)
+vim.keymap.set(
+    "v",
+    "<leader>y",
+    '"+y',
+    {
+        desc = "yank to system clipboard"
+    }
+)
+vim.keymap.set(
+    "n",
+    "<leader>Y",
+    '"+Y',
+    {
+        desc = "yank to system clipboard"
+    }
+)
 
 -- Delete to void register
-vim.keymap.set("n", "<leader>d", "\"_d", {
-  desc = "delete to void register"
-})
-vim.keymap.set("v", "<leader>d", "\"_d", {
-  desc = "delete to void register"
-})
+vim.keymap.set(
+    "n",
+    "<leader>d",
+    '"_d',
+    {
+        desc = "delete to void register"
+    }
+)
+vim.keymap.set(
+    "v",
+    "<leader>d",
+    '"_d',
+    {
+        desc = "delete to void register"
+    }
+)
 
 -- Q is the worst place in the universe
 vim.keymap.set("n", "Q", "<nop>")
@@ -62,13 +97,23 @@ vim.keymap.set("n", "Q", "<nop>")
 --vim.keymap.set("n", "<leader>j", "<cmd>lprev<CR>zz")
 
 -- Open search menu ready to replace the word I was on
-vim.keymap.set("n", "<leader>s", [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>]], {
-  desc = "find and replace word"
-})
+vim.keymap.set(
+    "n",
+    "<leader>s",
+    [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>]],
+    {
+        desc = "find and replace word"
+    }
+)
 -- Save with +x on file
 --vim.keymap.set("n", "<leader>x", "<cmd>!chmod +x %<CR>", { silent = true, desc = "save with +x on file" })
 
 -- Quickly reload vim config
-vim.keymap.set("n", "<leader><leader>", function()
-    vim.cmd("so")
-end, { desc = "reload vim config" })
+vim.keymap.set(
+    "n",
+    "<leader><leader>",
+    function()
+        vim.cmd("so")
+    end,
+    {desc = "reload vim config"}
+)

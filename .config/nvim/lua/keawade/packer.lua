@@ -93,8 +93,5 @@ return require("packer").startup(
 
         use "tpope/vim-surround"
         use "tpope/vim-commentary"
-
-        -- Personal vim cheatsheat
-        use "tinyheero/vim-myhelp"
     end
 )

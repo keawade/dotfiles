@@ -2,7 +2,7 @@
 
 ## `tmux-sessionizer`
 
-Modified from [ThePrimeagen's `tmux-sessionizer`][tmux-sessionizer-source] for
+Modified from [ThePrimeagen's `tmux-sessionizer`][tmux-sessionizer-original] for
 configurability.
 
 | Variable | Description | Default | Required |

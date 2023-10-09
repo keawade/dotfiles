@@ -1,14 +1,10 @@
 local mark = require("harpoon.mark")
 local ui = require("harpoon.ui")
 
--- Map basic harpoon functions
 vim.keymap.set("n", "<leader>a", mark.add_file, {desc = "[harpoon] add file"})
 vim.keymap.set("n", "<leader>h", ui.toggle_quick_menu, {desc = "[harpoon] open list"})
 
--- TODO: Might want to come back and set some explicit bindings
--- Disabled for now because the suggested keymaps conflicted with something
--- else I wanted bound to <C-h>
---vim.keymap.set("n", "<C-h>", function() ui.nav_file(1) end)
---vim.keymap.set("n", "<C-t>", function() ui.nav_file(2) end)
---vim.keymap.set("n", "<C-n>", function() ui.nav_file(3) end)
---vim.keymap.set("n", "<C-s>", function() ui.nav_file(4) end)
+vim.keymap.set("n", "<A-j>", function() ui.nav_file(1) end, { desc = "[harpoon] file 1" })
+vim.keymap.set("n", "<A-k>", function() ui.nav_file(2) end, { desc = "[harpoon] file 2" })
+vim.keymap.set("n", "<A-l>", function() ui.nav_file(3) end, { desc = "[harpoon] file 3" })
+vim.keymap.set("n", "<A-;>", function() ui.nav_file(4) end, { desc = "[harpoon] file 4" })

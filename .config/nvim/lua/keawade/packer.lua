@@ -26,7 +26,10 @@ return require("packer").startup(
         use "lukas-reineke/indent-blankline.nvim"
 
         -- Creates a list of quick swap targets
-        use("theprimeagen/harpoon")
+        use {
+            "theprimeagen/harpoon",
+            requires = { {"nvim-lua/plenary.nvim"} }
+        }
 
         -- Undo history visualizer
         use("mbbill/undotree")

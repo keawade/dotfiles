@@ -15,7 +15,7 @@ if [[ $# -eq 1 ]]; then
     selected=$1
 else
     read -ra DIRS <<< "$TMUX_SESSIONIZER_DIRS"
-    selected=$(find -L "${DIRS[@]}" -mindepth 1 -maxdepth 1 -type d | fzf)
+    selected=$(find -L "${DIRS[@]}" -mindepth 1 -maxdepth 1 -type d | sed -e "s@^$HOME/@@" | fzf)
 fi
 
 if [[ -z $selected ]]; then

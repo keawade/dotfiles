@@ -1,4 +1,4 @@
-# Scripts
+# Bin Scripts
 
 ## `tmux-sessionizer`
 

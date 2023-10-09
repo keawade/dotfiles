@@ -14,15 +14,10 @@ if status is-interactive
     # Select node version to use with nvm for session
     nvm use 18 >/dev/null
 
-    # Be more polite
-    alias f='fuck'
-
     # Override a few coreutils with fancier versions
     alias ls='exa'
     alias vim='nvim'
     alias ts='tmux-sessionizer'
-
-    set -gx THEFUCK_OVERRIDEN_ALIASES 'ls,find,vim'
 
     alias kc="kubectl"
     alias watchpods="watch -n 1 kubectl get pods"

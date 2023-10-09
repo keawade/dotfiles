@@ -11,11 +11,18 @@ else
     IFS="$TMUX_SESSIONIZER_IFS"
 fi
 
+if [[ -z "$TMUX_SESSIONIZER_TRIM_PREFIX" ]]; then
+    prefix=$HOME
+else
+    prefix=$TMUX_SESSIONIZER_TRIM_PREFIX
+fi
+
 if [[ $# -eq 1 ]]; then
     selected=$1
 else
     read -ra DIRS <<< "$TMUX_SESSIONIZER_DIRS"
-    selected=$(find -L "${DIRS[@]}" -mindepth 1 -maxdepth 1 -type d | sed -e "s@^$HOME/@@" | fzf)
+    $prefix
+    selected=$(find -L "${DIRS[@]}" -mindepth 1 -maxdepth 1 -type d | sed -e "s@^$prefix@@" | sed 's@[^/]$@&/@' | fzf)
 fi
 
 if [[ -z $selected ]]; then

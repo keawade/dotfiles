@@ -11,17 +11,19 @@ return require("packer").startup(
         -- Really nice fuzzy finder
         use {
             "nvim-telescope/telescope.nvim",
-            tag = "0.1.1",
-            -- or                            , branch = '0.1.x',
-            requires = {{"nvim-lua/plenary.nvim"}}
+            tag = "0.1.3",
+            requires = { {"nvim-lua/plenary.nvim"} }
         }
 
         -- Theme
-        use "neanias/everforest-nvim"
+        use { "catppuccin/nvim", as = "catppuccin" }
 
         -- Incremental parsing system for editor tools
         use("nvim-treesitter/nvim-treesitter", {run = ":TSUpdate"})
         use("nvim-treesitter/playground")
+
+        -- Indent guides for Neovim
+        use "lukas-reineke/indent-blankline.nvim"
 
         -- Creates a list of quick swap targets
         use("theprimeagen/harpoon")
@@ -55,26 +57,16 @@ return require("packer").startup(
             }
         }
 
-        -- Better file explorer than Ex
+        -- Neovim file explorer: edit your filesystem like a buffer
         use {
-            "nvim-tree/nvim-tree.lua",
-            requires = {
-                "nvim-tree/nvim-web-devicons" -- optional
-            },
-            config = function()
-                require("nvim-tree").setup {}
-            end
+            "stevearc/oil.nvim",
+            config = function() require('oil').setup() end
         }
-        -- File tabs
-        -- These optional plugins should be loaded directly because of a bug in Packer lazy loading
-        use "nvim-tree/nvim-web-devicons" -- OPTIONAL: for file icons
-        use "romgrk/barbar.nvim"
+        -- Pretty icons on files
+        use 'nvim-tree/nvim-web-devicons'
 
         -- Integrates nvim and tmux controls
         use "christoomey/vim-tmux-navigator"
-
-        -- vim motions tutorial games
-        use "ThePrimeagen/vim-be-good"
 
         -- Shows an overlay with options after keypresses to help remind me what
         -- mappings are available

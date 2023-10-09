@@ -1,7 +1,7 @@
-require("everforest").setup(
+require("catppuccin").setup(
     {
-        transparent_background_level = 1
+        transparent_background = true
     }
 )
 
-require("everforest").load()
+vim.cmd.colorscheme "catppuccin"

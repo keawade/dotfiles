@@ -1,12 +1,4 @@
 vim.g.mapleader = " "
-vim.keymap.set(
-    "n",
-    "<leader>pv",
-    vim.cmd.NvimTreeFocus,
-    {
-        desc = "focus file tree."
-    }
-)
 
 -- Allow selecting multiple lines and moving them up and down and automatically
 -- handling indentation changes for blocks

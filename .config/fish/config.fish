@@ -32,4 +32,6 @@ if status is-interactive
     alias clear="clear && echo 'so clean ✨'"
 
     alias :q="exit"
+
+    bind \cf tmux-sessionizer
 end

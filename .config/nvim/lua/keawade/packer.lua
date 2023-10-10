@@ -82,7 +82,9 @@ return require("packer").startup(
             end
         }
 
-        use "sbdchd/neoformat"
+        -- Lightweight yet powerful formatter plugin for Neovim
+        use 'stevearc/conform.nvim'
+        --use "sbdchd/neoformat"
 
         use "lewis6991/gitsigns.nvim"
 

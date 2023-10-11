@@ -76,7 +76,7 @@ vim.keymap.set(
 vim.keymap.set("n", "Q", "<nop>")
 
 -- Switch tmux sessions quickly
---vim.keymap.set("n", "<C-f>", "<cmd>silent !tmux neww tmux-sessionizer<CR>")
+vim.keymap.set("n", "<C-f>", "<cmd>silent !tmux neww tmux-sessionizer<CR>")
 
 -- Apply formatting
 -- vim.keymap.set("n", "<leader>f", function() vim.lsp.buf.format() end, { desc = "[lsp] format file" })

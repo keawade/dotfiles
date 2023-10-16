@@ -5,9 +5,9 @@ window:
     columns: 80
     lines: 24
   opacity: 0.8
+  option_as_alt: Both
 
 font:
   normal:
     family: NotoSansM Nerd Font Mono
-  size: 13.0
-
+  size: 20.0

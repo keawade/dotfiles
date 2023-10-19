@@ -12,10 +12,10 @@ if status is-interactive
     kubectl completion fish | source
 
     # Select node version to use with nvm for session
-    nvm use 18 >/dev/null
+    nvm use 20 >/dev/null
 
     # Override a few coreutils with fancier versions
-    alias ls='exa'
+    alias ls='eza'
     alias vim='nvim'
     alias ts='tmux-sessionizer'
 
@@ -23,6 +23,9 @@ if status is-interactive
     alias watchpods="watch -n 1 kubectl get pods"
     alias decapitate="helm ls --all --short | xargs -L1 helm delete"
     alias rdrestart="rdctl shutdown && rdctl start"
+
+    alias ip-internal="hostname -I"
+    alias ip-external="curl -s ifconfig.me | awk '{print $1}'"
 
     function on_exit --on-event fish_exit
         echo 'so long and thanks for all the fish 🐬'

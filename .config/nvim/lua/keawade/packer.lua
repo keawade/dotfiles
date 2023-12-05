@@ -86,6 +86,8 @@ return require("packer").startup(
         use 'stevearc/conform.nvim'
         --use "sbdchd/neoformat"
 
+        use "sontungexpt/stcursorword"
+
         use "lewis6991/gitsigns.nvim"
 
         use "tpope/vim-surround"

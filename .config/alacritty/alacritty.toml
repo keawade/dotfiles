@@ -1,0 +1,16 @@
+[font]
+size = 20.0
+
+[font.normal]
+family = "NotoSansM Nerd Font Mono"
+
+[window]
+opacity = 0.8
+option_as_alt = "Both"
+
+[window.dimensions]
+columns = 80
+lines = 24
+
+[window.padding]
+x = 5

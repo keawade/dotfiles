@@ -37,3 +37,5 @@ vim.opt.colorcolumn = "80"
 vim.g.mapleader = " "
 
 vim.opt.spell = true
+
+vim.opt.cursorline = true

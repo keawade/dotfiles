@@ -25,7 +25,12 @@ end
 
 vim.keymap.set("n", "<leader>pf", project_files, {desc = "[telescope] find files"})
 vim.keymap.set("n", "<leader>pg", builtin.git_status, {desc = "[telescope] git status"})
-vim.keymap.set("n", "<leader>ps", builtin.live_grep, {desc = "[telescope] live grep"})
+vim.keymap.set("n", "<leader>ps", function()
+    builtin.live_grep({ layout_strategy = 'vertical' })
+end, {desc = "[telescope] live grep"})
+vim.keymap.set("n", "<leader>py", function()
+    builtin.lsp_document_symbols({ layout_strategy = 'vertical' })
+end, {desc = "[telescope] symbols"})
 vim.keymap.set("n", "<leader>pb", builtin.buffers, {desc = "[telescope] buffers"})
 vim.keymap.set("n", "<leader>pc", builtin.commands, {desc = "[telescope] commands"})
 vim.keymap.set("n", "<leader>pm", builtin.man_pages, {desc = "[telescope] man pages"})

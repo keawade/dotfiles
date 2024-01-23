@@ -100,12 +100,3 @@ vim.keymap.set(
 -- Save with +x on file
 --vim.keymap.set("n", "<leader>x", "<cmd>!chmod +x %<CR>", { silent = true, desc = "save with +x on file" })
 
--- Quickly reload vim config
-vim.keymap.set(
-    "n",
-    "<leader><leader>",
-    function()
-        vim.cmd("so")
-    end,
-    {desc = "reload vim config"}
-)

@@ -39,7 +39,7 @@ vim.keymap.set("", "<leader>f", function()
 end, {desc = "[conform] format file"})
 
 -- Keymap to toggle autoformat setting
-vim.keymap.set("n", "<leader>F", function()
+vim.keymap.set("n", "<leader><leader>", function()
     if vim.b.disable_autoformat or vim.g.disable_autoformat then
         vim.cmd("FormatEnable")
     else

@@ -6,7 +6,9 @@
 	unstage = reset  -q HEAD --
 	discard = checkout  --
 	unstash = stash pop
-	tree = log --all --graph --decorate --oneline
+    tree = log --all --graph --decorate --oneline
+    undo = reset --soft HEAD~
+    rebase-onto = "~f() { git rebase --onto main $(git merge-base \"$1\" \"$2\") \"$1\"; }; f"
 
 [init]
 	defaultBranch = main
@@ -20,4 +22,7 @@
 #	pager = git-split-diffs --color | less -RFX
 
 [pull]
-	rebase = false
+    rebase = false
+
+[push]
+    autoSetupRemote = true

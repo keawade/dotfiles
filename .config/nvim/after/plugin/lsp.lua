@@ -17,28 +17,20 @@ lsp.ensure_installed(
 )
 
 local cmp = require("cmp")
-local cmp_select = {behavior = cmp.SelectBehavior.Select}
-local cmp_mappings =
-    lsp.defaults.cmp_mappings(
-    {
-        ["<C-p>"] = cmp.mapping.select_prev_item(cmp_select),
-        ["<C-n>"] = cmp.mapping.select_next_item(cmp_select),
-        ["<C-y>"] = cmp.mapping.confirm(cmp_select),
-        ["<C-Space>"] = cmp.mapping.complete(cmp_select)
-    }
-)
 
 lsp.on_attach(
     function(client, bufnr)
-        local opts = {buffer = bufnr, remap = false}
-
         vim.keymap.set(
             "n",
             "gd",
             function()
                 vim.lsp.buf.definition()
             end,
-            opts
+            {
+                buffer = bufnr,
+                remap = false,
+                desc = "[lsp] go to definition"
+            }
         )
         vim.keymap.set(
             "n",
@@ -46,7 +38,11 @@ lsp.on_attach(
             function()
                 vim.lsp.buf.definition()
             end,
-            opts
+            {
+                buffer = bufnr,
+                remap = false,
+                desc = "[lsp] go to definition"
+            }
         )
         vim.keymap.set(
             "n",
@@ -54,7 +50,11 @@ lsp.on_attach(
             function()
                 vim.lsp.buf.hover()
             end,
-            opts
+            {
+                buffer = bufnr,
+                remap = false,
+                desc = "[lsp] inspect"
+            }
         )
         vim.keymap.set(
             "n",
@@ -136,7 +136,11 @@ lsp.on_attach(
             function()
                 vim.lsp.buf.rename()
             end,
-            opts
+            {
+                buffer = bufnr,
+                remap = false,
+                desc = "[lsp] rename"
+            }
         )
         vim.keymap.set(
             "n",
@@ -144,9 +148,20 @@ lsp.on_attach(
             function()
                 vim.lsp.buf.signature_help()
             end,
-            opts
+            {
+                buffer = bufnr,
+                remap = false,
+                desc = "[lsp] signature help"
+            }
         )
     end
 )
 
-lsp.setup()
+lsp.setup({
+    mapping = cmp.mapping.preset.insert({
+        ["<C-p>"] = cmp.mapping.select_prev_item({ behavior = cmp.SelectBehavior.Select }),
+        ["<C-n>"] = cmp.mapping.select_next_item({ behavior = cmp.SelectBehavior.Select }),
+        ["<C-y>"] = cmp.mapping.confirm({ behavior = cmp.SelectBehavior.Select }),
+        ["<C-Space>"] = cmp.mapping.complete({ behavior = cmp.SelectBehavior.Select })
+    })
+})

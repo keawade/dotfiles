@@ -2,8 +2,20 @@ require("conform").setup({
     formatters_by_ft = {
         lua = { "stylelua" },
         javascript = { { "prettierd", "prettier" } },
+        javascriptreact = { { "prettierd", "prettier" } },
         typescript = { { "prettierd", "prettier" } },
+        typescriptreact = { { "prettierd", "prettier" } },
         markdown = { { "prettierd", "prettier" } },
+        handlebars = { { "prettierd", "prettier" } },
+        html = { { "prettierd", "prettier" } },
+        graphql = { { "prettierd", "prettier" } },
+        markdown = { { "prettierd", "prettier" } },
+        css = { { "prettierd", "prettier" } },
+        json = { { "prettierd", "prettier" } },
+        yaml = { { "prettierd", "prettier" } },
+        go = { { "gofmt" } },
+        rust = { { "rustfmt" } },
+        swift = { { "swift_format" } },
     },
     format_on_save = function(bufnr)
         -- Disable with a global or buffer-local variable

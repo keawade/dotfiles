@@ -39,3 +39,5 @@ vim.g.mapleader = " "
 vim.opt.spell = true
 
 vim.opt.cursorline = true
+
+vim.opt.mouse = ""

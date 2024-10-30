@@ -2,6 +2,10 @@ if status is-interactive
     # Set up dotfiles git command
     alias config='/usr/bin/git --git-dir=$HOME/.keawade-config/ --work-tree=$HOME'
 
+    set sponge_delay 5
+    set sponge_allow_previously_successful true
+    set sponge_successful_exit_codes 0 127 130
+
     # Initialize starship prompt
     starship init fish | source
 
